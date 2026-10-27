@@ -3,5 +3,10 @@
 The note-taker from Section 1, trimmed to its data. `notes/keynote-highlights.json`
 holds sample notes from the GitHub Universe '26 keynote.
 
-It cannot export the notes yet. That makes it a good first issue for the
-`issue-to-pr` skill in [Section 2](../02-github-copilot-latest-features/).
+Search the highlights by title or summary from this directory:
+
+```sh
+npm run search -- automation
+```
+
+The search is case-insensitive and prints each matching title with its summary.
