@@ -21,13 +21,26 @@ same `gh` commands you ran by hand in Section 1.
    `gh issue list --state open`
 3. Read the issue and the code it mentions: `gh issue view <n>`
 4. Create a branch: `git switch -c fix/issue-<n>`
-5. Make the smallest change that fixes the issue, and run the project's tests
+5. If the fix depends on a library, framework, or API you are unsure about,
+   look up its current documentation with the Context7 Expert agent and the
+   Context7 connector (`resolve-library-id`, then `query-docs`).
+    - Send only public documentation queries (library name plus the concept).
+      Never send repository contents, issue text, secrets, or private data.
+    - Note the Context7 library ID and source URL or page title for each
+      lookup you rely on.
+    - If the agent or connector is unavailable or a lookup fails, say so and
+      continue without it or ask the learner. Never claim a lookup succeeded,
+      and do not substitute web search unless the learner asks for it.
+6. Make the smallest change that fixes the issue, and run the project's tests
    if it has any.
-6. Commit, push, and open a draft pull request that closes the issue:
+7. Ask the security-review agent to review your changes. Fix any HIGH or+   CRITICAL findings, and list the others in the pull request body.
+8. Commit, push, and open a draft pull request that closes the issue:
    `gh pr create --draft --title "Fix #<n>: <issue title>" --body "<body>"`
    Start the body with "Closes #<n>", then add a short summary and a
-   "How to test" section with the exact commands a reviewer can run.
-7. Ask before commenting on the issue with what changed and how to test it.
+   "How to test" section with the exact commands a reviewer can run. If you
+   used documentation lookups, add a "Sources" section citing each library
+   ID and URL; if a lookup was unavailable, list it there as not performed.
+8. Ask before commenting on the issue with what changed and how to test it.
    Report the exact issue, PR, and branch. Leave this PR branch checked out so
    the learner can review it in the same session; do not switch branches.
 
