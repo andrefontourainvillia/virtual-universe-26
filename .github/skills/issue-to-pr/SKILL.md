@@ -14,7 +14,7 @@ same `gh` commands you ran by hand in Section 1.
    write access. Origin may still be the event repository. Use
    `GH_REPO=<verified-owner/repo>` for every GitHub CLI operation and push only to
    the explicitly verified fork remote, never implicitly to origin.
-   - If no fork destination is ready, stop before edits or resource creation.
+    - If no fork destination is ready, stop before edits or resource creation.
      Offer to prepare it in this same checkout with approval, preserving origin,
      other remotes, and local work. Do not open or switch sessions.
 2. Pick the issue. Use the number you were given, or list open issues and ask:
@@ -23,11 +23,10 @@ same `gh` commands you ran by hand in Section 1.
 4. Create a branch: `git switch -c fix/issue-<n>`
 5. Make the smallest change that fixes the issue, and run the project's tests
    if it has any.
-6. Show the changes and obtain approval before committing, pushing explicitly to
-   the verified fork remote, and opening
-   a draft pull request that closes the issue. Preserve any learner skill edits
-   and include them only with approval:
-   `gh pr create --draft --title "Fix #<n>: <issue title>" --body "Closes #<n>"`
+6. Commit, push, and open a draft pull request that closes the issue:
+   `gh pr create --draft --title "Fix #<n>: <issue title>" --body "<body>"`
+   Start the body with "Closes #<n>", then add a short summary and a
+   "How to test" section with the exact commands a reviewer can run.
 7. Ask before commenting on the issue with what changed and how to test it.
    Report the exact issue, PR, and branch. Leave this PR branch checked out so
    the learner can review it in the same session; do not switch branches.
