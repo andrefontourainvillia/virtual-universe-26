@@ -2,7 +2,7 @@
   <img src="banner.svg" alt="Section 3 final exercise: Attach a cheat sheet artifact. One skill, one issue, two artifacts, and a surprise." width="100%">
 </p>
 
-**Final exercise · 5 min · 3 steps**
+**Final exercise · 4 min · 2 steps**
 
 You're almost done with the workshop! To bring everything you learned together
 you will create an Issue Artifact.
@@ -12,7 +12,7 @@ you will create an Issue Artifact.
 > links — directly to a GitHub issue. Instead of important context living in
 > scattered comments or external tools.
 
-In this section you'll use the `/create-issue-artifact` skill to attach a
+In this section you'll run the `/create-issue-artifact` skill to attach a
 cheat sheet of the top updates from the Virtual Universe practical sessions to
 an issue.
 
@@ -21,36 +21,42 @@ an issue.
 The link opens a session with this guide as a canvas. Already in a session? Open
 **+ → Installed extensions → Universe '26 cheat sheet artifact**.
 
-## 1. Open an issue session
+## 1. Run the skill
 
-In your fork, ask Copilot:
+Opening the guide sets your issue up on its own. The canvas finds your fork of
+`octodemo/virtual-universe-26` (or creates one if you don't have it yet), turns
+on issues, and opens **My GitHub Universe '26 cheat sheet** there. You don't
+need your fork checked out locally, and no Copilot turn is involved.
+
+`/create-issue-artifact` is a built-in skill you can use in GitHub Copilot App
+to attach artifacts to the issue linked to your session. For this workshop we
+created a custom `cheatsheet-artifact` skill that uses the same command, but
+includes a few extra steps.
+
+Copy and paste the following command in the chat to create the artifacts:
 
 ```text
-Create an issue titled "My GitHub Universe '26 cheat sheet" and open a session for it
+/cheatsheet-artifact
 ```
 
-Switch to the new session since `/create-issue-artifact` attaches to the issue
-linked to the session you run it in.
+In about a minute Copilot:
 
-## 2. Run the skill
+- reads the Universe recap in this repository and writes your cheat sheet from
+  it, then adds it to your issue as the **GitHub Universe 2026 cheat sheet**
+- adds a second artifact, **How Copilot built this**, with its working notes
+  from the session
+- opens the **Virtual Universe Badge Simulator** with a surprise on your badge,
+  then adds it to your issue as a third artifact, **Your Virtual Universe 26
+  badge**
 
-```text
-/create-issue-artifact follow github-virtual-universe-highlights/attach-a-cheat-sheet-artifact/instructions.md
-```
+## 2. Share your badge
 
-Copilot reads [the instructions](instructions.md), then:
-
-- reads the [recap](../github-universe-recap/) and [cheat sheet](../github-universe-cheat-sheet/) pages
-- designs a one-page cheat sheet in the Universe theme
-- makes a **surprise card** 
-- adds both images to your issue as artifacts
-
-## 3. Open your issue
-
-Open the issue and select **Artifacts**. 
-
-✨Read the **surprise card to see an easter egg** we've left for you in your
-[Virtual GitHub Universe Badge](https://leereilly.net/badger.github.io/virtual/)
+Open the issue and select **Artifacts** to see all three. Press **Share** in
+the simulator to save a GIF of your Virtual Universe badge to your Downloads
+folder, and post it with the hashtag **#virtualuniverse26** to connect with the
+rest of the virtual community 🧑🏿‍🚀. Check out the full online
+[Virtual Universe Badge](https://badger.github.io/virtual/) and click on the
+top right button for a tiny recap!
 
 ## What you'll get
 
@@ -58,7 +64,7 @@ Open the issue and select **Artifacts**.
   <img src="cheatsheet-preview.png" alt="Example cheat sheet with The Modern GitHub Experience and Agentic Software Development with GitHub Copilot features" width="85%">
 </p>
 
-<p align="center"><b>Artifact 1</b> · your cheat sheet &nbsp;·&nbsp; <b>Artifact 2</b> · a surprise you'll only see once you run the skill </p>
+<p align="center"><b>Artifact 1</b> · your cheat sheet &nbsp;·&nbsp; <b>Artifact 2</b> · how Copilot built it &nbsp;·&nbsp; <b>Artifact 3</b> · a surprise on your badge</p>
 
 ---
 
